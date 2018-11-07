@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Sok.Socket.TCP - sok</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">sok</a>&nbsp;/&nbsp;<a href="./index.html">Sok.Socket.TCP</a><br/>
+<br/>
+<h2>Package Sok.Socket.TCP</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-t-c-p-client-socket/index.html">TCPClientSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">class </span><span class="identifier">TCPClientSocket</span></code>
+<p>Class representing a client socket. You can use it to perform any I/O operation. Keep in mind that this class keep an internal
+queue for write operations thus storing data until written so you should have some kind of backpressure mechanism to prevent
+the accumulation of too many data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-c-p-server-socket/index.html">TCPServerSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">class </span><span class="identifier">TCPServerSocket</span></code>
+<p>Class representing a listening socket. You can use it to perform accept() operation only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="create-t-c-p-client-socket.html">createTCPClientSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">expect</span> <span class="keyword">fun </span><span class="identifier">createTCPClientSocket</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP$createTCPClientSocket(kotlin.String, kotlin.Int)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP$createTCPClientSocket(kotlin.String, kotlin.Int)/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-t-c-p-client-socket/index.html"><span class="identifier">TCPClientSocket</span></a></code>
+<p>Create a client socket with the given address and port. This function will throw a <code>ConnectionRefusedException</code> if the socket
+failed to connect.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

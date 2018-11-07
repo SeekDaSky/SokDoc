@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Selector.register - sok</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">sok</a>&nbsp;/&nbsp;<a href="../index.html">Sok.Selector</a>&nbsp;/&nbsp;<a href="index.html">Selector</a>&nbsp;/&nbsp;<a href="./register.html">register</a><br/>
+<br/>
+<h1>register</h1>
+<a name="Sok.Selector.Selector$register(java.nio.channels.SelectableChannel, kotlin.Int, kotlin.Any)"></a>
+<code><span class="keyword">fun </span><span class="identifier">register</span><span class="symbol">(</span><span class="identifier" id="Sok.Selector.Selector$register(java.nio.channels.SelectableChannel, kotlin.Int, kotlin.Any)/channel">channel</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectableChannel.html"><span class="identifier">SelectableChannel</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Selector.Selector$register(java.nio.channels.SelectableChannel, kotlin.Int, kotlin.Any)/interest">interest</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Selector.Selector$register(java.nio.channels.SelectableChannel, kotlin.Int, kotlin.Any)/attachment">attachment</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html"><span class="identifier">SelectionKey</span></a></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L212">(source)</a>
+<p><strong>Platform and version requirements:</strong> JVM</p>
+<p>Register a <code>SelectableChannel</code> the NIO <code>Selector</code> and bind the attachment (<code>SuspentionMap</code>)</p>
+<h3>Parameters</h3>
+<p><a name="channel"></a>
+<code>channel</code> - Channel to register</p>
+<p><a name="interest"></a>
+<code>interest</code> - Initial interest (0)</p>
+<p><a name="attachment"></a>
+<code>attachment</code> - <code>SuspentionMap</code> attached to the channel</p>
+<p><strong>Return</strong><br/>
+NIO SelectionKey used by the SuspentionMap for registrations</p>
+</BODY>
+</HTML>

@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>alltypes - sok</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<h3>All Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../-sok.-exceptions/-buffer-destroyed-exception/index.html">Sok.Exceptions.BufferDestroyedException</a></td>
+<td>
+<p>Exception thrown when trying to modify the buffer after the destroy() method was called</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-exceptions/-buffer-overflow-exception/index.html">Sok.Exceptions.BufferOverflowException</a></td>
+<td>
+<p>Exception thrown when trying to put a value too large for the remaining space in the buffer</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-buffer/-buffer-pool/index.html">Sok.Buffer.BufferPool</a></td>
+<td>
+<p>In order to avoid garbage collection pressure it is a common practice to pre-allocate objects that are known to be long-living
+for a later use, Kotlin channels give us a great way to implement a quite straightforward object pool. The pool will allocate
+all the buffers lazily when needed, this means that the pool will never suspend until reaching the maximum size.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-exceptions/-buffer-underflow-exception/index.html">Sok.Exceptions.BufferUnderflowException</a></td>
+<td>
+<p>Exception thrown when trying to read a value too large for the remaining space in the buffer</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-exceptions/-connection-refused-exception/index.html">Sok.Exceptions.ConnectionRefusedException</a></td>
+<td>
+<p>Exception thrown when a client tries to connect and fails</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-selector/-interests/index.html">Sok.Selector.Interests</a></td>
+<td>
+<p>Enum representing the possible interests of a <code>SelectionKey</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-buffer/-j-s-multiplatform-buffer/index.html">Sok.Buffer.JSMultiplatformBuffer</a></td>
+<td>
+<p>JS implementation of the <code>MultiplatformBuffer</code> class</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-buffer/-j-v-m-multiplatform-buffer/index.html">Sok.Buffer.JVMMultiplatformBuffer</a></td>
+<td>
+<p>JVM implementation of the <code>MultiplatformBuffer</code> class</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-buffer/-multiplatform-buffer/index.html">Sok.Buffer.MultiplatformBuffer</a></td>
+<td>
+<p>A <code>MultiplatformBuffer</code> is the primitive type of Sok, you will use it to receive, send and manipulate data</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-buffer/-native-multiplatform-buffer/index.html">Sok.Buffer.NativeMultiplatformBuffer</a></td>
+<td>
+<p>Native implementation of the <code>MultiplatformBuffer</code> class</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-selector/-selector/index.html">Sok.Selector.Selector</a></td>
+<td>
+<p>Class wrapping the NIO Selector class for a more "coroutine-friendly" approach. Each <code>SelectableCHannel</code> will have a <code>SuspentionMap</code> as
+attachment, this map contains all teh Continuations/Lambda to resume/call when an event come in.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-selector/-selector-pool/index.html">Sok.Selector.SelectorPool</a></td>
+<td>
+<p>A SelectorPool will order the Selectors by the number of channels registered. This allow us to do a basic load balancing between all the Selectors</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-socket.-t-c-p/-t-c-p-client-socket/index.html">Sok.Socket.TCP.TCPClientSocket</a></td>
+<td>
+<p>Class representing a client socket. You can use it to perform any I/O operation. Keep in mind that this class keep an internal
+queue for write operations thus storing data until written so you should have some kind of backpressure mechanism to prevent
+the accumulation of too many data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-sok.-socket.-t-c-p/-t-c-p-server-socket/index.html">Sok.Socket.TCP.TCPServerSocket</a></td>
+<td>
+<p>Class representing a listening socket. You can use it to perform accept() operation only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

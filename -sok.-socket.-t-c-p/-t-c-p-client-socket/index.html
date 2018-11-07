@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TCPClientSocket - sok</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">sok</a>&nbsp;/&nbsp;<a href="../index.html">Sok.Socket.TCP</a>&nbsp;/&nbsp;<a href="./index.html">TCPClientSocket</a><br/>
+<br/>
+<h1>TCPClientSocket</h1>
+<code><span class="keyword">expect</span> <span class="keyword">class </span><span class="identifier">TCPClientSocket</span></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Socket/TCP/TCPClientSocket.kt#L13">(source)</a>
+<p>Class representing a client socket. You can use it to perform any I/O operation. Keep in mind that this class keep an internal
+queue for write operations thus storing data until written so you should have some kind of backpressure mechanism to prevent
+the accumulation of too many data.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TCPClientSocket</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$<init>(java.nio.channels.SocketChannel, Sok.Selector.SelectorPool)/channel">channel</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SocketChannel.html"><span class="identifier">SocketChannel</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$<init>(java.nio.channels.SocketChannel, Sok.Selector.SelectorPool)/selectorPool">selectorPool</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-selector/-selector-pool/index.html"><span class="identifier">SelectorPool</span></a><span class="symbol">)</span></code>
+<p>Helper contrutor that simply get the less busy selector from the pool then use the "standard" constructor</p>
+<code><span class="identifier">TCPClientSocket</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$<init>(java.nio.channels.SocketChannel, Sok.Selector.Selector)/channel">channel</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SocketChannel.html"><span class="identifier">SocketChannel</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$<init>(java.nio.channels.SocketChannel, Sok.Selector.Selector)/selector">selector</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-selector/-selector/index.html"><span class="identifier">Selector</span></a><span class="symbol">)</span></code>
+<p>Wrap a NIO channel with a Sok client socket class</p>
+<code><span class="identifier">TCPClientSocket</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$<init>(kotlin.Any)/socket">socket</span><span class="symbol">:</span>&nbsp;<span class="keyword">dynamic</span><span class="symbol">)</span></code>
+<p>Wrap a Node.js socket with Sok Client socket class</p>
+<code><span class="identifier">TCPClientSocket</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$<init>(kotlin.Int, Sok.Selector.Selector)/socket">socket</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$<init>(kotlin.Int, Sok.Selector.Selector)/selector">selector</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-selector/-selector/index.html"><span class="identifier">Selector</span></a><span class="symbol">)</span></code>
+<p>Construtor used by the Server socket to build the client socket</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="is-closed.html">isClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isClosed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Keep track of the socket status</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="bind-close-handler.html">bindCloseHandler</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">bindCloseHandler</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$bindCloseHandler(kotlin.Function0((kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>handler called when the socket close (expectantly or not)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bulk-read.html">bulkRead</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">bulkRead</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$bulkRead(Sok.Buffer.MultiplatformBuffer, kotlin.Function2((Sok.Buffer.MultiplatformBuffer, kotlin.Int, kotlin.Boolean)))/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-buffer/-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$bulkRead(Sok.Buffer.MultiplatformBuffer, kotlin.Function2((Sok.Buffer.MultiplatformBuffer, kotlin.Int, kotlin.Boolean)))/operation">operation</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-buffer/-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">read</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">actual</span> <span class="keyword">fun </span><span class="identifier">bulkRead</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$bulkRead(, kotlin.Function2((, kotlin.Int, kotlin.Boolean)))/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$bulkRead(, kotlin.Function2((, kotlin.Int, kotlin.Boolean)))/operation">operation</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">read</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code>
+<p>Used to do efficient read-intensive loops, it will basically execute the operation each time there is data to be read
+and avoid registrations/allocation between each iteration. The passed lambda must return true to continue the loop or
+false to exit. The call will suspend as long as the loop is running.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>gracefully stops the socket. The method suspends as it waits for all the writing requests in the channel to be
+executed before effectively closing the channel</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="force-close.html">forceClose</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">forceClose</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>forcefully closes the channel without checking the writing request queue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="read.html">read</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(Sok.Buffer.MultiplatformBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-buffer/-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">actual</span> <span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read()/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Perform a suspending read, the method will read n bytes ( 0 &lt; n &lt;= buffer.remaining() ) and update the cursor</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(Sok.Buffer.MultiplatformBuffer, kotlin.Int)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-buffer/-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(Sok.Buffer.MultiplatformBuffer, kotlin.Int)/minToRead">minToRead</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">actual</span> <span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(, kotlin.Int)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(, kotlin.Int)/minToRead">minToRead</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Perform a suspending read, the method will read n bytes ( minToRead &lt; n &lt;= buffer.remaining() ) and update the cursor</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="write.html">write</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$write(Sok.Buffer.MultiplatformBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-buffer/-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">actual</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$write()/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Perform a suspending write, the method will not return until all the data between buffer.cursor and buffer.limit are written.
+The socket use an internal write queue, allowing multiple threads to concurrently write. Backpressure mechanisms
+should be implemented by the developer to avoid having too much data in the queue.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

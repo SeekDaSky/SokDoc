@@ -1,0 +1,174 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Selector - sok</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">sok</a>&nbsp;/&nbsp;<a href="../index.html">Sok.Selector</a>&nbsp;/&nbsp;<a href="./index.html">Selector</a><br/>
+<br/>
+<h1>Selector</h1>
+<code><span class="keyword">class </span><span class="identifier">Selector</span></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L37">(source)</a>
+<p><strong>Platform and version requirements:</strong> JVM, Native</p>
+<p>Class wrapping the NIO Selector class for a more "coroutine-friendly" approach. Each <code>SelectableCHannel</code> will have a <code>SuspentionMap</code> as
+attachment, this map contains all teh Continuations/Lambda to resume/call when an event come in.</p>
+<p>Sockets register quite frequently and as the NIO Selector class blocks any registration while selecting we have to implement a way to
+synchronize registrations and the Selector class. This is done by sharing the <code>CoroutineScope</code> of the Selector to the <code>SuspentionMap</code>
+classes, this way the <code>SuspentionMap</code> is able to launch coroutine on the Selector Thread, thus ensuring mutual-exclusion.</p>
+<p>To reduce the number of registration, a socket may register for a unknown number of event. If so the selector will call a lambda after
+each event and this lambda will return if the Selector should keep the registration or not. This method slow down the selector but
+the performance gain is worth it.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Selector</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Class wrapping the NIO Selector class for a more "coroutine-friendly" approach. Each <code>SelectableCHannel</code> will have a <code>SuspentionMap</code> as
+attachment, this map contains all teh Continuations/Lambda to resume/call when an event come in.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="coroutine-scope.html">coroutineScope</a><br/>
+(JVM)</p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">coroutineScope</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>scope given to the <code>SuspentionMap</code> classes to run registration coroutine on the right thread</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-closed.html">isClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isClosed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>is the Selector still running</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-in-selection.html">isInSelection</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isInSelection</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>is the selector in selection</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="number-of-channel.html">numberOfChannel</a><br/>
+(JVM)</p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">numberOfChannel</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>number fo channel registered to this selector, used for load balancing</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Close the selector, close all SuspentionMap, cancel the main loop and close the thread</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="register.html">register</a><br/>
+(JVM)</p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">register</span><span class="symbol">(</span><span class="identifier" id="Sok.Selector.Selector$register(java.nio.channels.SelectableChannel, kotlin.Int, kotlin.Any)/channel">channel</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectableChannel.html"><span class="identifier">SelectableChannel</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Selector.Selector$register(java.nio.channels.SelectableChannel, kotlin.Int, kotlin.Any)/interest">interest</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Selector.Selector$register(java.nio.channels.SelectableChannel, kotlin.Int, kotlin.Any)/attachment">attachment</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html"><span class="identifier">SelectionKey</span></a></code>
+<p>Register a <code>SelectableChannel</code> the NIO <code>Selector</code> and bind the attachment (<code>SuspentionMap</code>)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="wakeup.html">wakeup</a><br/>
+(JVM)</p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">wakeup</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Wake the NIO selector up, thus making registrations non-blocking</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="default-selector.html">defaultSelector</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">defaultSelector</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>selector</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="default-selector-pool.html">defaultSelectorPool</a><br/>
+(JVM)</p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">defaultSelectorPool</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>selector pool</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-selector-pool-init.html">isSelectorPoolInit</a><br/>
+(JVM)</p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isSelectorPoolInit</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>is the selector pool initialized.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close-selector-and-wait.html">closeSelectorAndWait</a><br/>
+(Native)</p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">closeSelectorAndWait</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Close the selector</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-default-scope.html">setDefaultScope</a><br/>
+(Native)</p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setDefaultScope</span><span class="symbol">(</span><span class="identifier" id="Sok.Selector.Selector.Companion$setDefaultScope()/scope">scope</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Bind the Selector to a particular CoroutineScope, mainly used in order to prevent the
+event loop from exiting while te selector is still running</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

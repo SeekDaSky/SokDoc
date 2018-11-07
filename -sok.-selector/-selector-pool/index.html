@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SelectorPool - sok</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">sok</a>&nbsp;/&nbsp;<a href="../index.html">Sok.Selector</a>&nbsp;/&nbsp;<a href="./index.html">SelectorPool</a><br/>
+<br/>
+<h1>SelectorPool</h1>
+<code><span class="keyword">class </span><span class="identifier">SelectorPool</span></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/SelectorPool.kt#L15">(source)</a>
+<p><strong>Platform and version requirements:</strong> JVM</p>
+<p>A SelectorPool will order the Selectors by the number of channels registered. This allow us to do a basic load balancing between all the Selectors</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SelectorPool</span><span class="symbol">(</span><span class="identifier" id="Sok.Selector.SelectorPool$<init>(kotlin.Int)/NbrOfSelector">NbrOfSelector</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code>
+<p>A SelectorPool will order the Selectors by the number of channels registered. This allow us to do a basic load balancing between all the Selectors</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="is-closed.html">isClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isClosed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>state of the pool</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Close the pool and all the selectors inside it</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-lessbusy-selector.html">getLessbusySelector</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getLessbusySelector</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-selector/index.html"><span class="identifier">Selector</span></a></code>
+<p>Get the less busy selector (first in the pool list), the method is suspending because an actor is used behind the scene to
+allow multiple threads accessing the pool and still get the right selector. This may not be the most efficient way to do it
+but a socket get a selector once so it is not critical.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

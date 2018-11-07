@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TCPClientSocket.read - sok</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">sok</a>&nbsp;/&nbsp;<a href="../index.html">Sok.Socket.TCP</a>&nbsp;/&nbsp;<a href="index.html">TCPClientSocket</a>&nbsp;/&nbsp;<a href="./read.html">read</a><br/>
+<br/>
+<h1>read</h1>
+<a name="Sok.Socket.TCP.TCPClientSocket$read(Sok.Buffer.MultiplatformBuffer)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(Sok.Buffer.MultiplatformBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-buffer/-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Socket/TCP/TCPClientSocket.kt#L62">(source)</a>
+<p><strong>Platform and version requirements:</strong> Common</p>
+<br/>
+<a name="Sok.Socket.TCP.TCPClientSocket$read()"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">actual</span> <span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read()/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L197">(source)</a>
+<p><strong>Platform and version requirements:</strong> JVM, JS, Native</p>
+<p>Perform a suspending read, the method will read n bytes ( 0 &lt; n &lt;= buffer.remaining() ) and update the cursor</p>
+<h3>Parameters</h3>
+<p><a name="buffer"></a>
+<code>buffer</code> - buffer used to store the data read</p>
+<p><strong>Return</strong><br/>
+Number of byte read</p>
+<a name="Sok.Socket.TCP.TCPClientSocket$read(Sok.Buffer.MultiplatformBuffer, kotlin.Int)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(Sok.Buffer.MultiplatformBuffer, kotlin.Int)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../-sok.-buffer/-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(Sok.Buffer.MultiplatformBuffer, kotlin.Int)/minToRead">minToRead</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Socket/TCP/TCPClientSocket.kt#L71">(source)</a>
+<p><strong>Platform and version requirements:</strong> Common</p>
+<br/>
+<a name="Sok.Socket.TCP.TCPClientSocket$read(, kotlin.Int)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">actual</span> <span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(, kotlin.Int)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">, </span><span class="identifier" id="Sok.Socket.TCP.TCPClientSocket$read(, kotlin.Int)/minToRead">minToRead</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L232">(source)</a>
+<p><strong>Platform and version requirements:</strong> JVM, JS, Native</p>
+<p>Perform a suspending read, the method will read n bytes ( minToRead &lt; n &lt;= buffer.remaining() ) and update the cursor</p>
+<h3>Parameters</h3>
+<p><a name="buffer"></a>
+<code>buffer</code> - buffer used to store the data read</p>
+<p><strong>Return</strong><br/>
+Number of byte read</p>
+</BODY>
+</HTML>

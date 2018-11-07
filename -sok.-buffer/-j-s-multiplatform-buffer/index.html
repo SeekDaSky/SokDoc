@@ -1,0 +1,219 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JSMultiplatformBuffer - sok</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">sok</a>&nbsp;/&nbsp;<a href="../index.html">Sok.Buffer</a>&nbsp;/&nbsp;<a href="./index.html">JSMultiplatformBuffer</a><br/>
+<br/>
+<h1>JSMultiplatformBuffer</h1>
+<code><span class="keyword">class </span><span class="identifier">JSMultiplatformBuffer</span></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/js/sok-js/src/Sok/Buffer/JSMultiplateformBuffer.kt#L12">(source)</a>
+<p><strong>Platform and version requirements:</strong> JS</p>
+<p>JS implementation of the <code>MultiplatformBuffer</code> class</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">JSMultiplatformBuffer</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$<init>(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code>
+<p>Allocate a new MultiplatformBuffer</p>
+<code><span class="identifier">JSMultiplatformBuffer</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$<init>(kotlin.ByteArray)/array">array</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span></code>
+<p>Create a new MultiplatformBuffer wrapping a byteArray , thus avoiding copy</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clone.html">clone</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clone</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Deep copy the buffer. All the data from the start to the capacity will be copied, the cursor and limit will be reset</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="destroy.html">destroy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">destroy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Destroy the ByteBuffer, you cannot call any method on the buffer after calling destroy. This method MUST be called on native platforms
+in order to free/unpin memory but you can skip it on any other platform</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-byte-impl.html">getByteImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getByteImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getByteImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html"><span class="identifier">Byte</span></a></code>
+<p>Get the byte at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-bytes-impl.html">getBytesImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBytesImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getBytesImpl(kotlin.Int, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getBytesImpl(kotlin.Int, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code>
+<p>Get an array of bytes of a given length starting at the current buffer cursor position. If the index parameter is provided, the
+cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-int-impl.html">getIntImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIntImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getIntImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Get the integer at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-long-impl.html">getLongImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getLongImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getLongImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code>
+<p>Get the long at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-short-impl.html">getShortImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getShortImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getShortImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html"><span class="identifier">Short</span></a></code>
+<p>Get the short at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-u-byte-impl.html">getUByteImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getUByteImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getUByteImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Get the unsigned byte at the current cursor position. If the index parameter is provided, the cursor will be ignored and
+not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-u-int-impl.html">getUIntImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getUIntImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getUIntImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Get the unsigned integer at the current cursor position. If the index parameter is provided, the cursor will be ignored and
+not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-u-long-impl.html">getULongImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getULongImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getULongImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Get the unsigned long at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-u-short-impl.html">getUShortImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getUShortImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$getUShortImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Get the unsigned short at the current cursor position. If the index parameter is provided, the cursor will be ignored and
+not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="put-byte-impl.html">putByteImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">putByteImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putByteImpl(kotlin.Byte, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html"><span class="identifier">Byte</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putByteImpl(kotlin.Byte, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Put the given byte inside the buffer at the buffer cursor position. If the index parameter is provided, the
+cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="put-bytes-impl.html">putBytesImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">putBytesImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putBytesImpl(kotlin.ByteArray, kotlin.Int)/array">array</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putBytesImpl(kotlin.ByteArray, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Put the given byte array inside the buffer starting at the buffer cursor position. If the index parameter is provided, the
+cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="put-int-impl.html">putIntImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">putIntImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putIntImpl(kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putIntImpl(kotlin.Int, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Put the given integer inside the buffer starting at the buffer cursor position. If the index parameter is provided, the
+cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="put-long-impl.html">putLongImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">putLongImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putLongImpl(kotlin.Long, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putLongImpl(kotlin.Long, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Put the given long inside the buffer starting at the buffer cursor position. If the index parameter is provided, the
+cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="put-short-impl.html">putShortImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">putShortImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putShortImpl(kotlin.Short, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html"><span class="identifier">Short</span></a><span class="symbol">, </span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$putShortImpl(kotlin.Short, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Put the given short inside the buffer starting at the buffer cursor position. If the index parameter is provided, the
+cursor will be ignored and not modified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-cursor-impl.html">setCursorImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setCursorImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$setCursorImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Used only by the JVM to synchronize the MultiplatformBuffer state with the ByteBuffer state</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-limit-impl.html">setLimitImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setLimitImpl</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.JSMultiplatformBuffer$setLimitImpl(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Used only by the JVM to synchronize the MultiplatformBuffer state with the ByteBuffer state</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-array.html">toArray</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code>
+<p>Get all the data between the start of the buffer and its limit, the data is copied and is not linked to the content
+of the buffer. WARNING this behaviour is different from the ByteBuffer array() method, please read the documentation
+carefully</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

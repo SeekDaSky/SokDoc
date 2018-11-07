@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Sok.Selector - sok</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">sok</a>&nbsp;/&nbsp;<a href="./index.html">Sok.Selector</a><br/>
+<br/>
+<h2>Package Sok.Selector</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-interests/index.html">Interests</a><br/>
+(Native)</p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Interests</span></code>
+<p>Enum representing the possible interests of a <code>SelectionKey</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-selector/index.html">Selector</a><br/>
+(JVM, Native)</p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Selector</span></code>
+<p>Class wrapping the NIO Selector class for a more "coroutine-friendly" approach. Each <code>SelectableCHannel</code> will have a <code>SuspentionMap</code> as
+attachment, this map contains all teh Continuations/Lambda to resume/call when an event come in.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-selector-pool/index.html">SelectorPool</a><br/>
+(JVM)</p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SelectorPool</span></code>
+<p>A SelectorPool will order the Selectors by the number of channels registered. This allow us to do a basic load balancing between all the Selectors</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

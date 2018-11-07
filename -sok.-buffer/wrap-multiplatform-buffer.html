@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>wrapMultiplatformBuffer - sok</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">sok</a>&nbsp;/&nbsp;<a href="index.html">Sok.Buffer</a>&nbsp;/&nbsp;<a href="./wrap-multiplatform-buffer.html">wrapMultiplatformBuffer</a><br/>
+<br/>
+<h1>wrapMultiplatformBuffer</h1>
+<a name="Sok.Buffer$wrapMultiplatformBuffer(kotlin.ByteArray)"></a>
+<code><span class="keyword">expect</span> <span class="keyword">fun </span><span class="identifier">wrapMultiplatformBuffer</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer$wrapMultiplatformBuffer(kotlin.ByteArray)/array">array</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/MultiplatformBuffer.kt#L477">(source)</a>
+<p>Wrap the array with a MultiplatformBuffer. The data will not be copied and the array will be linked to the
+MultiplatformBuffer class</p>
+<h3>Parameters</h3>
+<p><a name="array"></a>
+<code>array</code> - array to wrap</p>
+<p><strong>Return</strong><br/>
+buffer</p>
+<a name="Sok.Buffer$wrapMultiplatformBuffer(java.nio.ByteBuffer)"></a>
+<code><span class="keyword">fun </span><span class="identifier">wrapMultiplatformBuffer</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer$wrapMultiplatformBuffer(java.nio.ByteBuffer)/array">array</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Buffer/JVMMultiplatformBuffer.kt#L310">(source)</a>
+<p><strong>Platform and version requirements:</strong> JVM</p>
+<p>Make a MultiplatformBuffer that use a given ByteBuffer.</p>
+<h3>Parameters</h3>
+<p><a name="array"></a>
+<code>array</code> - array to wrap</p>
+<p><strong>Return</strong><br/>
+buffer</p>
+</BODY>
+</HTML>

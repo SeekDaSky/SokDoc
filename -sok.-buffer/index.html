@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Sok.Buffer - sok</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">sok</a>&nbsp;/&nbsp;<a href="./index.html">Sok.Buffer</a><br/>
+<br/>
+<h2>Package Sok.Buffer</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-buffer-pool/index.html">BufferPool</a><br/>
+(Common)</p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BufferPool</span></code>
+<p>In order to avoid garbage collection pressure it is a common practice to pre-allocate objects that are known to be long-living
+for a later use, Kotlin channels give us a great way to implement a quite straightforward object pool. The pool will allocate
+all the buffers lazily when needed, this means that the pool will never suspend until reaching the maximum size.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-j-s-multiplatform-buffer/index.html">JSMultiplatformBuffer</a><br/>
+(JS)</p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">JSMultiplatformBuffer</span></code>
+<p>JS implementation of the <code>MultiplatformBuffer</code> class</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-j-v-m-multiplatform-buffer/index.html">JVMMultiplatformBuffer</a><br/>
+(JVM)</p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">JVMMultiplatformBuffer</span></code>
+<p>JVM implementation of the <code>MultiplatformBuffer</code> class</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-multiplatform-buffer/index.html">MultiplatformBuffer</a><br/>
+(Common)</p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">MultiplatformBuffer</span></code>
+<p>A <code>MultiplatformBuffer</code> is the primitive type of Sok, you will use it to receive, send and manipulate data</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-native-multiplatform-buffer/index.html">NativeMultiplatformBuffer</a><br/>
+(Native)</p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">NativeMultiplatformBuffer</span></code>
+<p>Native implementation of the <code>MultiplatformBuffer</code> class</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="alloc-direct-multiplatform-buffer.html">allocDirectMultiplatformBuffer</a><br/>
+(JVM)</p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">allocDirectMultiplatformBuffer</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer$allocDirectMultiplatformBuffer(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Allocate a new MultiplatformBuffer. The buffer is not zeroed, be careful.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="alloc-multiplatform-buffer.html">allocMultiplatformBuffer</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">fun </span><span class="identifier">allocMultiplatformBuffer</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer$allocMultiplatformBuffer(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a></code>
+<p>Allocate a new MultiplatformBuffer. The buffer is not zeroed, be careful.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="wrap-multiplatform-buffer.html">wrapMultiplatformBuffer</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">fun </span><span class="identifier">wrapMultiplatformBuffer</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer$wrapMultiplatformBuffer(kotlin.ByteArray)/array">array</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a></code>
+<p>Wrap the array with a MultiplatformBuffer. The data will not be copied and the array will be linked to the
+MultiplatformBuffer class</p>
+<code><span class="keyword">fun </span><span class="identifier">wrapMultiplatformBuffer</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer$wrapMultiplatformBuffer(java.nio.ByteBuffer)/array">array</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Make a MultiplatformBuffer that use a given ByteBuffer.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

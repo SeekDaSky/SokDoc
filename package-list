@@ -1,0 +1,8 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+Sok.Buffer
+Sok.Exceptions
+Sok.Selector
+Sok.Socket.TCP
+Sok.Utils

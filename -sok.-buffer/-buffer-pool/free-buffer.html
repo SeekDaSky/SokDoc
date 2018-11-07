@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BufferPool.freeBuffer - sok</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">sok</a>&nbsp;/&nbsp;<a href="../index.html">Sok.Buffer</a>&nbsp;/&nbsp;<a href="index.html">BufferPool</a>&nbsp;/&nbsp;<a href="./free-buffer.html">freeBuffer</a><br/>
+<br/>
+<h1>freeBuffer</h1>
+<a name="Sok.Buffer.BufferPool$freeBuffer(Sok.Buffer.MultiplatformBuffer)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">freeBuffer</span><span class="symbol">(</span><span class="identifier" id="Sok.Buffer.BufferPool$freeBuffer(Sok.Buffer.MultiplatformBuffer)/obj">obj</span><span class="symbol">:</span>&nbsp;<a href="../-multiplatform-buffer/index.html"><span class="identifier">MultiplatformBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <a href="https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/BufferPool.kt#L50">(source)</a>
+<p><strong>Platform and version requirements:</strong> Common</p>
+<p>Free the object in order to let another coroutine have it. If you forget to call this method the pool will empty
+itself and starve, blocking all coroutines calling requestBuffer()</p>
+<h3>Parameters</h3>
+<p><a name="obj"></a>
+<code>obj</code> - Buffer to free</p>
+</BODY>
+</HTML>
