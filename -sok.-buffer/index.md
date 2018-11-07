@@ -6,6 +6,8 @@ title: Sok.Buffer - sok
 
 ## Package Sok.Buffer
 
+As Sok is buffer based, you need to use buffers to perform I/O operations with Sok. The primitive for that is the `MultiplatformBuffer` class. This package also contains a basic implementation of a buffer pool for object recycling.
+
 ### Types
 
 | [BufferPool](-buffer-pool/index.html)<br>(Common) | `class BufferPool`<br>In order to avoid garbage collection pressure it is a common practice to pre-allocate objects that are known to be long-living for a later use, Kotlin channels give us a great way to implement a quite straightforward object pool. The pool will allocate all the buffers lazily when needed, this means that the pool will never suspend until reaching the maximum size. |

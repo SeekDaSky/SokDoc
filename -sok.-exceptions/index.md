@@ -8,6 +8,8 @@ title: Sok.Exceptions - sok
 
 **Platform and version requirements:** Common
 
+Contains all the exception classes
+
 ### Exceptions
 
 | [BufferDestroyedException](-buffer-destroyed-exception/index.html)<br>(Common) | `class BufferDestroyedException : `[`Exception`](http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html)<br>Exception thrown when trying to modify the buffer after the destroy() method was called |

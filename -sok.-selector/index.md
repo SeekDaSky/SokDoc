@@ -6,6 +6,8 @@ title: Sok.Selector - sok
 
 ## Package Sok.Selector
 
+Internal package containing selector-related classes for JVM and Native platforms. The only usefull methods for a developper are the `Seletor` companion object methods.
+
 ### Types
 
 | [Interests](-interests/index.html)<br>(Native) | `enum class Interests`<br>Enum representing the possible interests of a `SelectionKey` |

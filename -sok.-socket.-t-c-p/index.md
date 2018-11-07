@@ -6,6 +6,8 @@ title: Sok.Socket.TCP - sok
 
 ## Package Sok.Socket.TCP
 
+Contains the heart of Sok. All the client and server socket classes are here
+
 ### Types
 
 | [TCPClientSocket](-t-c-p-client-socket/index.html) | `expect class TCPClientSocket`<br>Class representing a client socket. You can use it to perform any I/O operation. Keep in mind that this class keep an internal queue for write operations thus storing data until written so you should have some kind of backpressure mechanism to prevent the accumulation of too many data. |
