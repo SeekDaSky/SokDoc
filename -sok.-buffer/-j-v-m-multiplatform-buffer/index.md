@@ -1,0 +1,40 @@
+---
+title: JVMMultiplatformBuffer - sok
+---
+
+[sok](../../index.html) / [Sok.Buffer](../index.html) / [JVMMultiplatformBuffer](./index.html)
+
+# JVMMultiplatformBuffer
+
+`class JVMMultiplatformBuffer` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Buffer/JVMMultiplatformBuffer.kt#L11)
+
+**Platform and version requirements:** JVM
+
+JVM implementation of the `MultiplatformBuffer` class
+
+### Constructors
+
+| [&lt;init&gt;](-init-.html) | `JVMMultiplatformBuffer(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Allocate a new MultiplatformBuffer`JVMMultiplatformBuffer(array: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`)`<br>Create a new MultiplatformBuffer wrapping a byteArray , thus avoiding copy`JVMMultiplatformBuffer(array: `[`ByteBuffer`](http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html)`)`<br>Create a MultiplatformBuffer with a specific NIO ByteBuffer |
+
+### Functions
+
+| [clone](clone.html) | `fun clone(): <ERROR CLASS>`<br>Deep copy the buffer. All the data from the start to the capacity will be copied, the cursor and limit will be reset |
+| [destroy](destroy.html) | `fun destroy(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Destroy the ByteBuffer, you cannot call any method on the buffer after calling destroy. This method MUST be called on native platforms in order to free/unpin memory but you can skip it on any other platform |
+| [getByteImpl](get-byte-impl.html) | `fun getByteImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`Byte`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)<br>Get the byte at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [getBytesImpl](get-bytes-impl.html) | `fun getBytesImpl(length: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>Get an array of bytes of a given length starting at the current buffer cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [getIntImpl](get-int-impl.html) | `fun getIntImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Get the integer at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [getLongImpl](get-long-impl.html) | `fun getLongImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)<br>Get the long at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [getShortImpl](get-short-impl.html) | `fun getShortImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)<br>Get the short at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [getUByteImpl](get-u-byte-impl.html) | `fun getUByteImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): <ERROR CLASS>`<br>Get the unsigned byte at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [getUIntImpl](get-u-int-impl.html) | `fun getUIntImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): <ERROR CLASS>`<br>Get the unsigned integer at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [getULongImpl](get-u-long-impl.html) | `fun getULongImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): <ERROR CLASS>`<br>Get the unsigned long at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [getUShortImpl](get-u-short-impl.html) | `fun getUShortImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): <ERROR CLASS>`<br>Get the unsigned short at the current cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [putByteImpl](put-byte-impl.html) | `fun putByteImpl(value: `[`Byte`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)`, index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Put the given byte inside the buffer at the buffer cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [putBytesImpl](put-bytes-impl.html) | `fun putBytesImpl(array: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`, index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Put the given byte array inside the buffer starting at the buffer cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [putIntImpl](put-int-impl.html) | `fun putIntImpl(value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Put the given integer inside the buffer starting at the buffer cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [putLongImpl](put-long-impl.html) | `fun putLongImpl(value: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`, index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Put the given long inside the buffer starting at the buffer cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [putShortImpl](put-short-impl.html) | `fun putShortImpl(value: `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)`, index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Put the given short inside the buffer starting at the buffer cursor position. If the index parameter is provided, the cursor will be ignored and not modified |
+| [setCursorImpl](set-cursor-impl.html) | `fun setCursorImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Used only by the JVM to synchronize the MultiplatformBuffer state with the ByteBuffer state |
+| [setLimitImpl](set-limit-impl.html) | `fun setLimitImpl(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Used only by the JVM to synchronize the MultiplatformBuffer state with the ByteBuffer state |
+| [toArray](to-array.html) | `fun toArray(): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>Get all the data between the start of the buffer and its limit, the data is copied and is not linked to the content of the buffer. WARNING this behaviour is different from the ByteBuffer array() method, please read the documentation carefully |
+
