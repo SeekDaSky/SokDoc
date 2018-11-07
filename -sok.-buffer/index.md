@@ -6,7 +6,7 @@ title: Sok.Buffer - sok
 
 ## Package Sok.Buffer
 
-As Sok is buffer based, you need to use buffers to perform I/O operations with Sok. The primitive for that is the `MultiplatformBuffer` class. This package also contains a basic implementation of a buffer pool for object recycling.
+As Sok is buffer based, you need to use buffers to perform I/O operations. The primitive for that is the `MultiplatformBuffer` class. This package also contains a basic implementation of a buffer pool for object recycling.
 
 ### Types
 

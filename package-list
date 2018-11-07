@@ -4,5 +4,6 @@ $dokka.linkExtension:html
 Sok.Buffer
 Sok.Exceptions
 Sok.Selector
+Sok.Socket.Options
 Sok.Socket.TCP
 Sok.Utils

@@ -14,8 +14,11 @@ title: alltypes - sok
 | [Sok.Buffer.JVMMultiplatformBuffer](../-sok.-buffer/-j-v-m-multiplatform-buffer/index.html) | JVM implementation of the `MultiplatformBuffer` class |
 | [Sok.Buffer.MultiplatformBuffer](../-sok.-buffer/-multiplatform-buffer/index.html) | A `MultiplatformBuffer` is the primitive type of Sok, you will use it to receive, send and manipulate data |
 | [Sok.Buffer.NativeMultiplatformBuffer](../-sok.-buffer/-native-multiplatform-buffer/index.html) | Native implementation of the `MultiplatformBuffer` class |
+| [Sok.Exceptions.OptionNotSupportedException](../-sok.-exceptions/-option-not-supported-exception/index.html) | Exception thrown when trying to get/set a socket option not supported on the platform |
+| [Sok.Socket.Options.Options](../-sok.-socket.-options/-options/index.html) | Enum representing all the available options. Please keep in mind that all options are not supported by al the platforms |
 | [Sok.Selector.Selector](../-sok.-selector/-selector/index.html) | Class wrapping the NIO Selector class for a more "coroutine-friendly" approach. Each `SelectableCHannel` will have a `SuspentionMap` as attachment, this map contains all teh Continuations/Lambda to resume/call when an event come in. |
 | [Sok.Selector.SelectorPool](../-sok.-selector/-selector-pool/index.html) | A SelectorPool will order the Selectors by the number of channels registered. This allow us to do a basic load balancing between all the Selectors |
+| [Sok.Socket.Options.SocketOption](../-sok.-socket.-options/-socket-option/index.html) | Class representing a socket option and its type |
 | [Sok.Socket.TCP.TCPClientSocket](../-sok.-socket.-t-c-p/-t-c-p-client-socket/index.html) | Class representing a client socket. You can use it to perform any I/O operation. Keep in mind that this class keep an internal queue for write operations thus storing data until written so you should have some kind of backpressure mechanism to prevent the accumulation of too many data. |
 | [Sok.Socket.TCP.TCPServerSocket](../-sok.-socket.-t-c-p/-t-c-p-server-socket/index.html) | Class representing a listening socket. You can use it to perform accept() operation only. |
 
