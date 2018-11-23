@@ -6,7 +6,7 @@ title: Interests.OP_WRITE - sok
 
 # OP_WRITE
 
-`OP_WRITE` [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Selector/SelectionKey.kt#L164)
+`OP_WRITE` [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Selector/SelectionKey.kt#L182)
 
 **Platform and version requirements:** Native
 

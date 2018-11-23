@@ -6,7 +6,7 @@ title: TCPServerSocket.isClosed - sok
 
 # isClosed
 
-`var isClosed: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Socket/TCP/TCPServerSocket.kt#L10)
+`var isClosed: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Socket/TCP/TCPServerSocket.kt#L14)
 
 keep track of the socket state
 

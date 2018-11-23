@@ -6,7 +6,7 @@ title: BufferDestroyedException.<init> - sok
 
 # &lt;init&gt;
 
-`BufferDestroyedException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`
+`BufferDestroyedException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "The buffer is destroyed an no operation should be done with it")`
 
 **Platform and version requirements:** Common
 

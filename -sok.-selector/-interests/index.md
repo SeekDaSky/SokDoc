@@ -6,7 +6,7 @@ title: Interests - sok
 
 # Interests
 
-`enum class Interests` [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Selector/SelectionKey.kt#L155)
+`enum class Interests` [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Selector/SelectionKey.kt#L173)
 
 **Platform and version requirements:** Native
 

@@ -6,7 +6,7 @@ title: BufferOverflowException.<init> - sok
 
 # &lt;init&gt;
 
-`BufferOverflowException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`
+`BufferOverflowException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "There is not enough remaining space in the buffer to perform the write operation")`
 
 **Platform and version requirements:** Common
 

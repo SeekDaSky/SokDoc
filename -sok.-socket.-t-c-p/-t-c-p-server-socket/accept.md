@@ -10,6 +10,12 @@ title: TCPServerSocket.accept - sok
 
 Accept a client socket. The method will suspend until there is a client to accept
 
+### Exceptions
+
+`NormalCloseException` -
+
+`SocketClosedException` -
+
 **Return**
 accepted socket
 

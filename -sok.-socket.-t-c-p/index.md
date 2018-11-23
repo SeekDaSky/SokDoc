@@ -16,4 +16,5 @@ Contains the heart of Sok. All the client and server socket classes are here
 ### Functions
 
 | [createTCPClientSocket](create-t-c-p-client-socket.html) | `suspend expect fun createTCPClientSocket(address: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, port: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`TCPClientSocket`](-t-c-p-client-socket/index.html)<br>Create a client socket with the given address and port. This function will throw a `ConnectionRefusedException` if the socket failed to connect. |
+| [createTCPServerSocket](create-t-c-p-server-socket.html) | `suspend expect fun createTCPServerSocket(address: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, port: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`TCPServerSocket`](-t-c-p-server-socket/index.html)<br>Start a listening socket on the given address (or alias) and port |
 

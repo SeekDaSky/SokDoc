@@ -6,7 +6,7 @@ title: Interests.interest - sok
 
 # interest
 
-`val interest: `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Selector/SelectionKey.kt#L155)
+`val interest: `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Selector/SelectionKey.kt#L173)
 
 **Platform and version requirements:** Native
 

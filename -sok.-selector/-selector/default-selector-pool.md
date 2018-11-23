@@ -6,7 +6,7 @@ title: Selector.defaultSelectorPool - sok
 
 # defaultSelectorPool
 
-`val defaultSelectorPool: <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L53)
+`val defaultSelectorPool: <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L55)
 
 **Platform and version requirements:** JVM
 

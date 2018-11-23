@@ -6,7 +6,7 @@ title: ConnectionRefusedException - sok
 
 # ConnectionRefusedException
 
-`class ConnectionRefusedException : `[`Exception`](http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Exceptions/Exceptions.kt#L8)
+`class ConnectionRefusedException : `[`SokException`](../-sok-exception/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Exceptions/Exceptions.kt#L50)
 
 **Platform and version requirements:** Common
 
@@ -18,5 +18,5 @@ Exception thrown when a client tries to connect and fails
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `ConnectionRefusedException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`<br>Exception thrown when a client tries to connect and fails |
+| [&lt;init&gt;](-init-.html) | `ConnectionRefusedException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "The peer refused the connection")`<br>Exception thrown when a client tries to connect and fails |
 

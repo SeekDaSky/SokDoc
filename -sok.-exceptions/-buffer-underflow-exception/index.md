@@ -6,7 +6,7 @@ title: BufferUnderflowException - sok
 
 # BufferUnderflowException
 
-`class BufferUnderflowException : `[`Exception`](http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Exceptions/Exceptions.kt#L22)
+`class BufferUnderflowException : `[`SokException`](../-sok-exception/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Exceptions/Exceptions.kt#L94)
 
 **Platform and version requirements:** Common
 
@@ -18,5 +18,5 @@ Exception thrown when trying to read a value too large for the remaining space i
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `BufferUnderflowException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`<br>Exception thrown when trying to read a value too large for the remaining space in the buffer |
+| [&lt;init&gt;](-init-.html) | `BufferUnderflowException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "There is not enough remaining data in the buffer to perform the read operation")`<br>Exception thrown when trying to read a value too large for the remaining space in the buffer |
 

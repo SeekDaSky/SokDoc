@@ -6,7 +6,7 @@ title: ConnectionRefusedException.<init> - sok
 
 # &lt;init&gt;
 
-`ConnectionRefusedException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`
+`ConnectionRefusedException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "The peer refused the connection")`
 
 **Platform and version requirements:** Common
 

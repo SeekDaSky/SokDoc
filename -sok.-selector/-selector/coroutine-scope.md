@@ -6,7 +6,7 @@ title: Selector.coroutineScope - sok
 
 # coroutineScope
 
-`val coroutineScope: <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L84)
+`val coroutineScope: <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L86)
 
 **Platform and version requirements:** JVM
 

@@ -6,7 +6,7 @@ title: Interests.OP_READ - sok
 
 # OP_READ
 
-`OP_READ` [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Selector/SelectionKey.kt#L159)
+`OP_READ` [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Selector/SelectionKey.kt#L177)
 
 **Platform and version requirements:** Native
 

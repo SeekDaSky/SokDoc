@@ -6,7 +6,7 @@ title: BufferDestroyedException - sok
 
 # BufferDestroyedException
 
-`class BufferDestroyedException : `[`Exception`](http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Exceptions/Exceptions.kt#L29)
+`class BufferDestroyedException : `[`SokException`](../-sok-exception/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Exceptions/Exceptions.kt#L101)
 
 **Platform and version requirements:** Common
 
@@ -18,5 +18,5 @@ Exception thrown when trying to modify the buffer after the destroy() method was
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `BufferDestroyedException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`<br>Exception thrown when trying to modify the buffer after the destroy() method was called |
+| [&lt;init&gt;](-init-.html) | `BufferDestroyedException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "The buffer is destroyed an no operation should be done with it")`<br>Exception thrown when trying to modify the buffer after the destroy() method was called |
 

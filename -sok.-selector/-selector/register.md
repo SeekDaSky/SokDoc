@@ -6,7 +6,7 @@ title: Selector.register - sok
 
 # register
 
-`fun register(channel: `[`SelectableChannel`](http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectableChannel.html)`, interest: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, attachment: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`SelectionKey`](http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L212)
+`suspend fun register(channel: `[`SelectableChannel`](http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectableChannel.html)`, interest: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, attachment: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`SelectionKey`](http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L242)
 
 **Platform and version requirements:** JVM
 

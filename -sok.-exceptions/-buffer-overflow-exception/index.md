@@ -6,7 +6,7 @@ title: BufferOverflowException - sok
 
 # BufferOverflowException
 
-`class BufferOverflowException : `[`Exception`](http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Exceptions/Exceptions.kt#L15)
+`class BufferOverflowException : `[`SokException`](../-sok-exception/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Exceptions/Exceptions.kt#L87)
 
 **Platform and version requirements:** Common
 
@@ -18,5 +18,5 @@ Exception thrown when trying to put a value too large for the remaining space in
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `BufferOverflowException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`<br>Exception thrown when trying to put a value too large for the remaining space in the buffer |
+| [&lt;init&gt;](-init-.html) | `BufferOverflowException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "There is not enough remaining space in the buffer to perform the write operation")`<br>Exception thrown when trying to put a value too large for the remaining space in the buffer |
 

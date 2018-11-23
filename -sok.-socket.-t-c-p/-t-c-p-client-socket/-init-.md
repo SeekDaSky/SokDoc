@@ -34,14 +34,4 @@ Wrap a Node.js socket with Sok Client socket class
 
 ### Parameters
 
-`socket` - Node.js socket class`TCPClientSocket(socket: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, selector: `[`Selector`](../../-sok.-selector/-selector/index.html)`)`
-
-**Platform and version requirements:** Native
-
-Construtor used by the Server socket to build the client socket
-
-### Parameters
-
-`socket` - file descriptor of the socket
-
-`selector` - Selector managing the socket
+`socket` - Node.js socket class

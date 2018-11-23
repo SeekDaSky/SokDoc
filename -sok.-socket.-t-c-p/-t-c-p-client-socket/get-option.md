@@ -6,7 +6,7 @@ title: TCPClientSocket.getOption - sok
 
 # getOption
 
-`fun <T> getOption(name: `[`Options`](../../-sok.-socket.-options/-options/index.html)`): `[`SocketOption`](../../-sok.-socket.-options/-socket-option/index.html)`<`[`T`](get-option.html#T)`>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Socket/TCP/TCPClientSocket.kt#L97)
+`fun <T> getOption(name: `[`Options`](../../-sok.-socket.-options/-options/index.html)`): `[`SocketOption`](../../-sok.-socket.-options/-socket-option/index.html)`<`[`T`](get-option.html#T)`>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Socket/TCP/TCPClientSocket.kt#L130)
 
 **Platform and version requirements:** Common
 
@@ -24,7 +24,7 @@ client.getOption<Int>(Options.SO_RCVBUF)
 **Return**
 the socket option
 
-`actual fun <T> getOption(name: <ERROR CLASS>): <ERROR CLASS><`[`T`](get-option.html#T)`>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L336)
+`actual fun <T> getOption(name: <ERROR CLASS>): <ERROR CLASS><`[`T`](get-option.html#T)`>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L374)
 
 **Platform and version requirements:** JVM, JS, Native
 

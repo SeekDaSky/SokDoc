@@ -6,7 +6,7 @@ title: Selector - sok
 
 # Selector
 
-`class Selector` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L37)
+`class Selector` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L39)
 
 **Platform and version requirements:** JVM, Native
 
@@ -35,7 +35,7 @@ the performance gain is worth it.
 ### Functions
 
 | [close](close.html) | `fun close(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Close the selector, close all SuspentionMap, cancel the main loop and close the thread |
-| [register](register.html)<br>(JVM) | `fun register(channel: `[`SelectableChannel`](http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectableChannel.html)`, interest: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, attachment: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`SelectionKey`](http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html)<br>Register a `SelectableChannel` the NIO `Selector` and bind the attachment (`SuspentionMap`) |
+| [register](register.html)<br>(JVM) | `suspend fun register(channel: `[`SelectableChannel`](http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectableChannel.html)`, interest: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, attachment: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`SelectionKey`](http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html)<br>Register a `SelectableChannel` the NIO `Selector` and bind the attachment (`SuspentionMap`) |
 | [wakeup](wakeup.html)<br>(JVM) | `fun wakeup(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Wake the NIO selector up, thus making registrations non-blocking |
 
 ### Companion Object Properties

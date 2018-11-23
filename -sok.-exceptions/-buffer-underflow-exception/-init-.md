@@ -6,7 +6,7 @@ title: BufferUnderflowException.<init> - sok
 
 # &lt;init&gt;
 
-`BufferUnderflowException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`
+`BufferUnderflowException(message: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "There is not enough remaining data in the buffer to perform the read operation")`
 
 **Platform and version requirements:** Common
 
