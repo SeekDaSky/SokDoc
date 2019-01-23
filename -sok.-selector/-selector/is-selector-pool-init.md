@@ -6,7 +6,7 @@ title: Selector.isSelectorPoolInit - sok
 
 # isSelectorPoolInit
 
-`var isSelectorPoolInit: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L50)
+`var isSelectorPoolInit: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L52)
 
 **Platform and version requirements:** JVM
 

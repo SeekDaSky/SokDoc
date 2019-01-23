@@ -6,7 +6,7 @@ title: JSMultiplatformBuffer.clone - sok
 
 # clone
 
-`fun clone(): <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/js/sok-js/src/Sok/Buffer/JSMultiplateformBuffer.kt#L229)
+`fun clone(): <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/js/sok-js/src/Sok/Buffer/JSMultiplateformBuffer.kt#L262)
 
 **Platform and version requirements:** JS
 

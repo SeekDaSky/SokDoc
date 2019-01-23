@@ -11,7 +11,7 @@ title: TCPClientSocket.write - sok
 **Platform and version requirements:** Common
 
 
-`suspend actual fun write(buffer: <ERROR CLASS>): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L308)
+`suspend actual fun write(buffer: <ERROR CLASS>): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L344)
 
 **Platform and version requirements:** JVM, JS, Native
 

@@ -6,7 +6,7 @@ title: allocDirectMultiplatformBuffer - sok
 
 # allocDirectMultiplatformBuffer
 
-`fun allocDirectMultiplatformBuffer(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Buffer/JVMMultiplatformBuffer.kt#L289)
+`fun allocDirectMultiplatformBuffer(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Buffer/JVMMultiplatformBuffer.kt#L303)
 
 **Platform and version requirements:** JVM
 

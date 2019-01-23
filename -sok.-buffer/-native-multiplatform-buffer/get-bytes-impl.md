@@ -22,3 +22,19 @@ cursor will be ignored and not modified
 **Return**
 data copied from the buffer
 
+`fun getBytesImpl(array: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`, index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?, destinationOffset: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, length: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Buffer/NativeMultiplatformBuffer.kt#L87)
+
+**Platform and version requirements:** Native
+
+Copy bytes into the array starting from the current cursor position or given index. You can start the copy with an offset in the
+destination array and specify the number of byte you want to be copied.
+
+### Parameters
+
+`array` - destination array
+
+`index` - index of the first byte, buffer.cursor is used if the index is null
+
+`destinationOffset` - The offset within the array of the first byte to be written
+
+`length` - amount of data to copy

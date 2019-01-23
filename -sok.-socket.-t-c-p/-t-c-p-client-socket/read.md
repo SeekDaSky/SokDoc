@@ -11,7 +11,7 @@ title: TCPClientSocket.read - sok
 **Platform and version requirements:** Common
 
 
-`suspend actual fun read(buffer: <ERROR CLASS>): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L226)
+`suspend actual fun read(buffer: <ERROR CLASS>): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L233)
 
 **Platform and version requirements:** JVM, JS, Native
 
@@ -41,7 +41,7 @@ Number of byte read
 **Platform and version requirements:** Common
 
 
-`suspend actual fun read(buffer: <ERROR CLASS>, minToRead: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L267)
+`suspend actual fun read(buffer: <ERROR CLASS>, minToRead: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L273)
 
 **Platform and version requirements:** JVM, JS, Native
 

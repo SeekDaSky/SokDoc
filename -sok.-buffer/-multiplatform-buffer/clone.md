@@ -6,7 +6,7 @@ title: MultiplatformBuffer.clone - sok
 
 # clone
 
-`abstract fun clone(): `[`MultiplatformBuffer`](index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/MultiplatformBuffer.kt#L389)
+`abstract fun clone(): `[`MultiplatformBuffer`](index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/MultiplatformBuffer.kt#L423)
 
 **Platform and version requirements:** Common
 

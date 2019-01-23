@@ -6,7 +6,7 @@ title: JVMMultiplatformBuffer.clone - sok
 
 # clone
 
-`fun clone(): <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Buffer/JVMMultiplatformBuffer.kt#L228)
+`fun clone(): <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Buffer/JVMMultiplatformBuffer.kt#L242)
 
 **Platform and version requirements:** JVM
 

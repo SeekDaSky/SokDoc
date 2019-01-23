@@ -6,7 +6,7 @@ title: wrapMultiplatformBuffer - sok
 
 # wrapMultiplatformBuffer
 
-`expect fun wrapMultiplatformBuffer(array: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`): `[`MultiplatformBuffer`](-multiplatform-buffer/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/MultiplatformBuffer.kt#L477)
+`expect fun wrapMultiplatformBuffer(array: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`): `[`MultiplatformBuffer`](-multiplatform-buffer/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/MultiplatformBuffer.kt#L511)
 
 Wrap the array with a MultiplatformBuffer. The data will not be copied and the array will be linked to the
 MultiplatformBuffer class
@@ -18,7 +18,7 @@ MultiplatformBuffer class
 **Return**
 buffer
 
-`fun wrapMultiplatformBuffer(array: `[`ByteBuffer`](http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html)`): <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Buffer/JVMMultiplatformBuffer.kt#L310)
+`fun wrapMultiplatformBuffer(array: `[`ByteBuffer`](http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html)`): <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Buffer/JVMMultiplatformBuffer.kt#L324)
 
 **Platform and version requirements:** JVM
 

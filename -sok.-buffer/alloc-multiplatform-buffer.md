@@ -6,7 +6,7 @@ title: allocMultiplatformBuffer - sok
 
 # allocMultiplatformBuffer
 
-`expect fun allocMultiplatformBuffer(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`MultiplatformBuffer`](-multiplatform-buffer/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/MultiplatformBuffer.kt#L468)
+`expect fun allocMultiplatformBuffer(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`MultiplatformBuffer`](-multiplatform-buffer/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/MultiplatformBuffer.kt#L502)
 
 Allocate a new MultiplatformBuffer. The buffer is not zeroed, be careful.
 

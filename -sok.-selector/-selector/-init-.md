@@ -10,14 +10,16 @@ title: Selector.<init> - sok
 
 **Platform and version requirements:** JVM, Native
 
-Class wrapping the NIO Selector class for a more "coroutine-friendly" approach. Each `SelectableCHannel` will have a `SuspentionMap` as
-attachment, this map contains all teh Continuations/Lambda to resume/call when an event come in.
+The Sok Selector class helps to go from a crappy blocking NIO Selector interface to a nice coroutine based interface.
+The Selector will take care of registrations to the underlying NIO Selector in a non-blocking and non-suspending way
+in order to have the best performances possible. In order to do that (and because the NIO Selector is blocking) the
+Selector have a single thread executor to which we will give "ticks" tasks, when a socket wants to register we will
+pause the ticking, register and send a resume task to the executor, if the registration task is fast enough the ticking
+will not be paused.
 
-Sockets register quite frequently and as the NIO Selector class blocks any registration while selecting we have to implement a way to
-synchronize registrations and the Selector class. This is done by sharing the `CoroutineScope` of the Selector to the `SuspentionMap`
-classes, this way the `SuspentionMap` is able to launch coroutine on the Selector Thread, thus ensuring mutual-exclusion.
-
-To reduce the number of registration, a socket may register for a unknown number of event. If so the selector will call a lambda after
-each event and this lambda will return if the Selector should keep the registration or not. This method slow down the selector but
-the performance gain is worth it.
+The Selector uses the SuspentionMap class to get and resume the suspention or execute the callback. There is two kinds
+of operation for the SuspentionMap, resume the continuation and unregister the interest directly (for single read operations)
+or execute a callback that will return whether or not we should unregister. The goal of those two "modes" is to reduce the
+number of (expensive) interest update operations. The counterpart is that the Selector now execute user-code which can
+greatly slow down the ticking rate, the developer should be careful.
 

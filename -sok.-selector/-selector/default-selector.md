@@ -6,13 +6,13 @@ title: Selector.defaultSelector - sok
 
 # defaultSelector
 
-`val defaultSelector: <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L63)
+`val defaultSelector: <ERROR CLASS>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L65)
 
 **Platform and version requirements:** JVM, Native
 
-selector
+default selector
 
 **Getter**
 
-selector
+default selector
 

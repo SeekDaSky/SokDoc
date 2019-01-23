@@ -6,12 +6,12 @@ title: Selector.isInSelection - sok
 
 # isInSelection
 
-`var isInSelection: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Selector/Selector.kt#L81)
+`var isInSelection: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/native/sok-native-linux/src/Sok/Selector/Selector.kt#L89)
 
-**Platform and version requirements:** JVM, Native
+**Platform and version requirements:** Native
 
-is the selector in selection
+is the selector in a selection loop
 
 ### Property
 
-`isInSelection` - is the selector in selection
+`isInSelection` - is the selector in a selection loop

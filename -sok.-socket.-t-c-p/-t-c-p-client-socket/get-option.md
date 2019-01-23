@@ -24,7 +24,7 @@ client.getOption<Int>(Options.SO_RCVBUF)
 **Return**
 the socket option
 
-`actual fun <T> getOption(name: <ERROR CLASS>): <ERROR CLASS><`[`T`](get-option.html#T)`>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L374)
+`actual fun <T> getOption(name: <ERROR CLASS>): <ERROR CLASS><`[`T`](get-option.html#T)`>` [(source)](https://github.com/SeekDaSky/Sok/tree/master/jvm/sok-jvm/src/Sok/Socket/TCP/TCPClientSocket.kt#L410)
 
 **Platform and version requirements:** JVM, JS, Native
 

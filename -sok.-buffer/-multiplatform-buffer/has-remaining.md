@@ -6,7 +6,7 @@ title: MultiplatformBuffer.hasRemaining - sok
 
 # hasRemaining
 
-`fun hasRemaining(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/MultiplatformBuffer.kt#L415)
+`fun hasRemaining(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/SeekDaSky/Sok/tree/master/common/sok-common/src/Sok/Buffer/MultiplatformBuffer.kt#L449)
 
 **Platform and version requirements:** Common
 
